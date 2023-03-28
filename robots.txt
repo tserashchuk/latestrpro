@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /api-auth/
+Disallow: /admin/
+Disallow: /adminlogin/
+Disallow: *?page
+Sitemap: https://rpro.by/sitemap.xml
+
+User-agent: Yandex
+Disallow: /api-auth/
+Disallow: /admin/
+Disallow: /adminlogin/
+Disallow: *?page
+Clean-param: department&utm_campain&amp&%3Futm_source&yadclid&yadordid&etext&_escaped_fragment_&yadordid&ZGlyZWN0LnlhbmRleC5ydTs2MDk1MTgwNzsxMDYxMzk4Nzg2ODt3d3cueWFuZGV4LmJ5OnByZW1pdW0 /category
+Clean-param: department&wbraid&amp&etext&yadclid&yadordid /region
+Clean-param: department&%3Futm_source&ved /
+Clean-param: department /priem-bytovoy-tehniki
+Clean-param: department /utilizaciya-tehniki
+Sitemap: https://rpro.by/sitemap.xml

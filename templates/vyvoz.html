@@ -1,0 +1,347 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block page_title %}Вывоз бытовой техники бесплатно в Минске. Бесплатный вывоз старой техники — «РесайклПро»{% endblock %}
+    {% block meta_description %} Вывоз бытовой техники бесплатно в Минске. ✅ Вынесем. ✅ Погрузим. ✅ Вывезем старую бытовую технику. ✅ Оформляйте заявку — ☎ +375 (29) 392 44 92. {% endblock %}
+    {% block opg %}
+    <meta property="og:title" content="Вывоз бытовой техники бесплатно в Минске. Бесплатный вывоз старой техники — «РесайклПро»" />
+    <meta property="og:description" content="Вывоз бытовой техники бесплатно в Минске. ✅ Вынесем. ✅ Погрузим. ✅ Вывезем старую бытовую технику. ✅ Оформляйте заявку — ☎ +375 (29) 392 44 92." />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static '/img/logo.png' %}"/>
+    {% endblock %}
+    {% block scripts %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Вы проводите демонтаж техники?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>Сотрудники могут, в некоторых случаях, помочь с отключением приборов. Для демонтажа некоторых приборов (например газовой плиты) мы настоятельно рекомендуем воспользоваться услугами профессионалов</p>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "Когда вы сможете вывезти технику?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>Основная часть заявок обрабатывается в течении дня. Точное время вывоза вы можете согласовать с нашими операторами.</p>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "Могу ли я получить вознаграждение?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>Да - можете. Для этого необходимо самостоятельно привезти технику в один из наших <a href={% url 'punkty' %}>приемных пукнтов</a>. Мы выплатим 0,25 BYN за килограмм техники</p>"
+        }
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+          {
+              "@type": "ImageObject",
+              "@id": "{% static '1.jpg' %}",
+              "url": "{% static '1.jpg' %}",
+              "contentUrl": "{% static '1.jpg' %}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/photos/tm1.jpg' %}",
+              "url": "{% static '/img/photos/tm1.jpg' %}",
+              "contentUrl": "{% static '/img/photos/tm1.jpg' %}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/photos/about4.jpg' %}",
+              "url": "{% static '/img/photos/about4.jpg' %}",
+              "contentUrl": "{% static '/img/photos/about4.jpg' %}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "http://themes.iki-bir.com/sandbox/src/img/icons/telemarketer.svg",
+              "url": "http://themes.iki-bir.com/sandbox/src/img/icons/telemarketer.svg",
+              "contentUrl": "http://themes.iki-bir.com/sandbox/src/img/icons/telemarketer.svg"
+          }]
+    }
+    </script>
+    {% endblock %}
+
+
+{% block content %}
+    <div class="content-wrapper">
+        <section class="wrapper bg-light">
+            <div class="container pt-3">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb" id="breadcrumblist" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="/">Главная</a>
+                        <meta itemprop="position" content="1" />
+                        <meta itemprop="name" content="Главная"/>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a class="inactiveLink" itemprop="item" href="{% url 'vyvoz'  %}">Бесплатный вывоз бытовой техники</a>
+                        <meta itemprop="position" content="2" />
+                        <meta itemprop="name" content="Бесплатный вывоз бытовой техники"/>
+                    </li>
+                  </ol>
+                </nav>
+            </div>
+        </section>
+        <section class="wrapper bg-light">
+            <div class="container pt-12 pt-md-12">
+                <div class="row gx-lg-0 gx-xl-8 gy-10 gy-md-13 gy-lg-0 mb-7 mb-md-10 mb-lg-16 align-items-center">
+                    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-1 position-relative order-lg-2"
+                         data-cue="zoomIn">
+                        <div class="shape bg-dot primary rellax w-17 h-19" data-rellax-speed="1"
+                             style="top: -1.7rem; left: -1.5rem;"></div>
+                        <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
+                             style="bottom: -1.8rem; right: -0.8rem; width: 85%; height: 90%;"></div>
+                        <figure class="rounded"><img src="{% static '1.jpg' %}" alt="Бесплатный вывоз техники
+                         1"/></figure>
+                    </div>
+                    <!--/column -->
+                    <div class="col-lg-5 mt-lg-n10 text-center text-lg-start" data-group="page-title">
+                        <h1 class="display-1 mb-5">Бесплатный вывоз техники</h1>
+                        <p class="lead fs-25 lh-sm mb-7 px-md-10 px-lg-0">Мы вывозим любую технику, в любом состоянии и количестве.</p>
+                        <ul>
+                            <li>99% заявок вывозим в день заказа</li>
+                            <li>Вынесем и погрузим технику</li>
+                            <li>Приедем в удобное для вас время</li>
+                        </ul>
+                        <div class="d-flex justify-content-center justify-content-lg-start"
+                             data-group="page-title-buttons">
+                            <span><a href="#"
+                                     class="btn btn-lg btn-primary rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#modal-01">Заказать звонок</a></span>
+                        </div>
+                    </div>
+                    <!--/column -->
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper bg-light">
+            <div class="container pb-16">
+                <div class="card shadow-lg">
+                    <div class="row gx-0">
+                        <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start d-none d-md-block"
+                             data-image-src="{% static '/img/photos/tm1.jpg' %}" alt="Бесплатный вывоз техники 2"
+                             style="background-image: url({% static '/img/photos/tm1.jpg' %});">
+                        </div>
+                        <!--/column -->
+                        <div class="col-lg-6">
+                            <div class="p-10 p-md-11 p-lg-13">
+                                <h2 class="display-4 mb-3">Заявка на вывоз техники</h2>
+                                <script data-b24-form="inline/8/vu94qk" data-skip-moving="true">
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b11356450/crm/form/loader_8.js');
+</script>
+                            </div>
+                            <!--/div -->
+                        </div>
+                        <!--/column -->
+                    </div>
+                    <!--/.row -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.container -->
+        </section>
+
+
+        <section class="wrapper bg-light">
+            <div class="container pb-16">
+                <h2 class="display-4 mb-3">Как происходит вывоз техники?</h2>
+                <p class="lead fs-lg mb-8">Если вы хотите получить выплату за технику сдайте ее в один из <a href="{% url 'punkty' %}">приемных пунктов</a></p>
+                <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper line">
+                    <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-primary disabled mb-4"><span
+                            class="number">01</span></span>
+                        <div class="mb-1 h4like">Оставить заявку</div>
+                        <p>Оформить заявку на вывоз или связаться с нами любым удобным способом - например <a href="#" data-bs-toggle="modal" data-bs-target="#modal-01">заказать звонок</a></p>
+                    </div>
+                    <!--/column -->
+                    <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-soft-primary disabled mb-4"><span class="number">02</span></span>
+                        <div class="mb-1 h4like">Согласовать время вывоза</div>
+                        <p>За час до приезда вам позвонит сотрудник РесайклПро</p>
+                    </div>
+                    <!--/column -->
+                    <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-soft-primary disabled mb-4"><span
+                            class="number">03</span></span>
+                        <div class="mb-1 h4like">Передать технику</div>
+                        <p>Наши специалисты заберут технику. Предварительно вам необходимо отключить ее</p>
+                    </div>
+                    <!--/column -->
+                </div>
+                <!--/.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+
+
+
+
+        <section class="wrapper bg-light">
+			<div class="container pb-10">
+				<div class="row gx-md-8 gx-xl-12 gy-10 align-items-center">
+					<div class="col-md-8 col-lg-6 offset-lg-0 col-xl-5 offset-xl-1 position-relative">
+						<div class="shape bg-dot primary rellax w-17 h-21" data-rellax-speed="1" style="top: -2rem; left: -1.4rem; transform: translate3d(0px, -18px, 0px);"></div>
+						<figure class="rounded"><img src={% static '/img/photos/about4.jpg' %} alt="Бесплатный вывоз техники 3"></figure>
+					</div>
+					<!--/column -->
+					<div class="col-lg-6">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 320.8 409.6" style="enable-background:new 0 0 320.8 409.6;" xml:space="preserve" data-inject-url="http://themes.iki-bir.com/sandbox/src/img/icons/telemarketer.svg" class="svg-inject icon-svg icon-svg-md mb-4">
+<title>telemarketer</title>
+<path class="svg-fill" d="M276.1,367.9v-8.5c0-63.6-52.1-115.7-115.7-115.7s-115.7,52-115.7,115.7v8.5c0,16.6,13.4,30,30,30l0,0h171.5  C262.7,397.9,276.1,384.5,276.1,367.9L276.1,367.9L276.1,367.9z"></path>
+<path class="svg-stroke" d="M246.1,409.6H74.6c-23,0-41.7-18.7-41.7-41.7v-8.5c0-70.4,57.1-127.5,127.5-127.5S287.9,289,287.9,359.4v8.5  C287.8,390.9,269.2,409.6,246.1,409.6L246.1,409.6z M160.4,255.4c-57.4,0.1-103.9,46.6-104,104v8.5c0,10.1,8.2,18.2,18.2,18.2h171.5  c10.1,0,18.2-8.2,18.2-18.2v-8.5C264.3,301.9,217.8,255.4,160.4,255.4L160.4,255.4z"></path>
+<path class="svg-stroke" d="M305.9,145.5h-23.5c0-67.4-54.6-122-122-122s-122,54.6-122,122H14.9C14.9,65.3,80.2,0,160.4,0  S305.9,65.3,305.9,145.5z"></path>
+<path class="svg-stroke" d="M160.4,251.3c-57,0-103.2-46.2-103.2-103.2S103.4,44.9,160.4,44.9s103.2,46.2,103.2,103.2l0,0  C263.5,205.1,217.3,251.2,160.4,251.3z M160.4,68.4c-44,0-79.7,35.7-79.7,79.7s35.7,79.7,79.7,79.7s79.7-35.7,79.7-79.7l0,0  C240,104.1,204.4,68.5,160.4,68.4z"></path>
+<path class="svg-fill" d="M68.3,130.4c0-5.6-2.9-10.8-7.6-13.8c-15-9.4-34.7-4.9-44.1,10.1c-3.2,5.1-4.9,11.1-4.9,17.1v21.5  c0,17.7,14.4,32,32.1,32.1c6,0,11.8-1.7,16.9-4.9c4.7-3,7.6-8.2,7.6-13.8V130.4z"></path>
+<path class="svg-stroke" d="M43.8,209.2C19.6,209.1,0,189.5,0,165.3v-21.5C0,119.6,19.5,100,43.7,100c8.2,0,16.3,2.3,23.3,6.7  c8.2,5.1,13.1,14.1,13.1,23.8v48.4c0.1,9.7-4.9,18.7-13.1,23.8C60.1,206.9,52,209.2,43.8,209.2L43.8,209.2z M43.8,123.4  c-11.2,0-20.3,9.1-20.4,20.4v21.5c0,11.2,9.1,20.3,20.4,20.4c3.8,0,7.5-1.1,10.7-3.1c1.3-0.9,2.1-2.3,2.1-3.9v-48.3  c0-1.6-0.8-3-2.1-3.9C51.3,124.5,47.6,123.5,43.8,123.4z"></path>
+<path class="svg-fill" d="M252.4,130.4c0-5.6,2.9-10.8,7.6-13.8c15-9.4,34.7-4.9,44.1,10.1c3.2,5.1,4.9,11.1,4.9,17.1v21.5  c0,17.7-14.4,32-32.1,32.1c-6,0-11.8-1.7-16.9-4.9c-4.7-3-7.6-8.2-7.6-13.8V130.4z"></path>
+<path class="svg-stroke" d="M276.9,209.2c-8.2,0-16.2-2.3-23.1-6.6c-8.2-5.1-13.2-14.1-13.1-23.8v-48.4c-0.1-9.7,4.9-18.7,13.1-23.8  c20.5-12.8,47.5-6.6,60.3,13.9c4.4,7,6.7,15.1,6.7,23.3v21.5C320.8,189.5,301.2,209.1,276.9,209.2L276.9,209.2z M276.9,123.4  c-3.8,0-7.5,1.1-10.7,3.1c-1.3,0.9-2.1,2.3-2.1,3.9v48.4c0,1.6,0.8,3,2.1,3.9c9.5,5.9,22.1,3,28-6.5c2-3.2,3.1-7,3.1-10.8v-21.5  C297.3,132.6,288.2,123.5,276.9,123.4z"></path>
+<path class="svg-stroke" d="M251.2,195.9h-83.3c-6.5,0-11.7-5.2-11.7-11.7s5.2-11.7,11.7-11.7l0,0h83.3c6.5,0,11.7,5.3,11.7,11.7  C262.9,190.7,257.6,195.9,251.2,195.9z"></path>
+</svg>
+						<h2 class="display-4 mb-8">Оформим заявку на вывоз техники?</h2>
+						<div class="d-flex flex-row">
+							<div>
+								<div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-location-pin-alt"></i> </div>
+							</div>
+							<div>
+								     <div class="mb-1 h4like">Офис</div>
+                                                <address>ул. М. Лынькова 125 <br class="d-none d-md-block"/>Беларусь, г. Минск, 220033
+                                                </address>
+							</div>
+						</div>
+						<div class="d-flex flex-row">
+							<div>
+								<div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-phone-volume"></i> </div>
+							</div>
+							<div>
+								 <div class="mb-1 h4like">Телефоны для связи</div>
+                                                <span itemprop="telephone" href="tel:+375293924492"></span><p>+375 (29) 392 44 92</span><br class="d-none d-md-block"/><a class="nav-link" href="tel:+375297004492">+375 (29) 700 44 92</a>
+                                                </p>
+							</div>
+						</div>
+						<div class="d-flex flex-row">
+							<div>
+								<div class="icon text-primary fs-28 me-6 mt-n1"> <i class="uil uil-envelope"></i> </div>
+							</div>
+							<div>
+								 <div class="mb-1 h4like">E-mail</div>
+                                                <p class="mb-0"><a href="mailto:info@rpro.by" class="link-body">info@rpro.by</a>
+                                                </p>
+							</div>
+						</div>
+					</div>
+					<!--/column -->
+				</div>
+				<!--/.row -->
+			</div>
+			<!-- /.container -->
+		</section>
+		<section class="wrapper bg-light">
+            <div class="container pb-16">
+                <div class="card bg-soft-primary rounded-4">
+                    <div class="card-body p-md-10 p-xl-11">
+                        <div class="row gx-lg-8 gx-xl-12 gy-10">
+                            <div class="col-lg-6">
+                                <h2 class="display-4 mb-4">Часто задаваемые вопросы</h2>
+                                <p class="lead fs-lg mb-0">Если вы не нашли ответа на свой вопрос позвоните нам или закажите <a href="#" data-bs-toggle="modal" data-bs-target="#modal-01">обратный звонок</a></p>
+                            </div>
+                            <!--/column -->
+                            <div class="col-lg-6">
+                                <div class="accordion accordion-wrapper" id="accordionExample">
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingOne">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">Вы проводите демонтаж техники?
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>Сотрудники могут, в некоторых случаях, помочь с отключением приборов. Для демонтажа некоторых приборов (например газовой плиты) мы настоятельно рекомендуем воспользоваться услугами профессионалов</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingTwo">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwo" aria-expanded="false"
+                                                    aria-controls="collapseTwo">Когда вы сможете вывезти технику?
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>Основная часть заявок обрабатывается в течении дня. Точное время вывоза вы можете согласовать с нашими операторами.</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingThree">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThree" aria-expanded="false"
+                                                    aria-controls="collapseThree">Могу ли я получить вознаграждение?
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>Да - можете. Для этого необходимо самостоятельно привезти технику в один из наших <a href="{% url 'punkty' %}">приемных пукнтов</a>. Мы выплатим 0,25 BYN за килограмм техники</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingFour">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFour" aria-expanded="false"
+                                                    aria-controls="collapseFour">В каких городах работает услуга вывоза?
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseFour" class="accordion-collapse collapse"
+                                             aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>На данный момент услуга вывоза бытовой технике работает в Минске и Могилеве</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+                                </div>
+                                <!--/.accordion -->
+                            </div>
+                            <!--/column -->
+                        </div>
+                        <!--/.row -->
+                    </div>
+                    <!--/.card-body -->
+                </div>
+                <!--/.card -->
+            </div>
+            <!-- /.container -->
+        </section>
+
+    </div>
+    <!-- /.content-wrapper -->
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block page_title %}Сотрудничество с РесайклПро {% endblock %}
+    {% block meta_description %} Участвуйте в программе работы с крупными клиентами, согласуйте условия работы напрямую с руководством компании {% endblock %}
+
+    {% block opg %}
+    <meta property="og:title" content="Сотрудничество с РесайклПро" />
+    <meta property="og:description" content="Участвуйте в программе работы с крупными клиентами, согласуйте условия работы напрямую с руководством компании" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static '/img/jigsaw_colored.png' %}"/>
+    {% endblock %}
+
+{% block header_class %}
+     {% if tone == 'positive' %}<header class="wrapper" style="background-color: #e9ffee;"> {% endif %}
+{% if tone == 'negative' %}<header class="wrapper" style="background-color: #fdf3f4;"> {% endif %}
+{% endblock %}
+{% block content %}
+    {% if tone == 'negative' %}
+
+     <section class="wrapper bg-gradient-primary bg-gradient-red">
+      <div class="container py-14 pt-md-15 pb-md-18">
+        <div class="row text-center">
+          <div class="col-lg-9 col-xxl-7 mx-auto">
+            <h2 class="display-1 mb-4">Вы понизили рейтинг приемного пункта.</h2>
+            <p class="lead fs-24 lh-sm px-md-5 px-xl-15 px-xxl-10 mb-7">Вы недовольны нашей работой - сожалеем. Напишите в отзыве что вам не понравилось - в скором времени мы исправим все недочеты</p>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+        <div class="d-flex justify-content-center">
+          <span><a href="https://t.me/rproby_admin" class="btn btn-lg btn-primary rounded-pill mx-1" style="background-color: #BF0413; border-color: #BF0413;">Отправить отзыв</a></span>
+          
+        </div>
+        <!-- /div -->
+
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+
+{% endif %}
+
+    {% if tone == 'positive' %}
+         <section class="wrapper bg-gradient-primary">
+      <div class="container py-14 pt-md-15 pb-md-18">
+        <div class="row text-center">
+          <div class="col-lg-9 col-xxl-7 mx-auto">
+            <h2 class="display-1 mb-4">Вы повысили рейтинг приемного пункта!</h2>
+            <p class="lead fs-24 lh-sm px-md-5 px-xl-15 px-xxl-10 mb-7">Вы остались довольны нашей работой - мы рады! Вы повысили рейтинг приемного пункта - это учитывается при работе с нашими сотрудниками</p>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+        <div class="d-flex justify-content-center">
+          <span><a href="https://t.me/rproby_admin" class="btn btn-lg btn-primary rounded-pill mx-1">Отправить отзыв</a></span>
+
+        </div>
+        <!-- /div -->
+
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+
+    {% endif %}
+
+
+
+
+    <!-- /section -->
+<section class="wrapper bg-light">
+      <div class="container pb-8 pb-lg-10">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-15 mb-md-18 align-items-center">
+          <div class="col-lg-7">
+            <figure><img class="w-auto" src={{ punkt.punkt_image.url }} alt="{{ region.region_name }}"></figure>
+          </div>
+          <!--/column -->
+          <div class="col-lg-5">
+            <h3 class="display-4 mb-3">{{ punkt.punkt_name }}</h3>
+              {% if tone == 'negative' %}<p class="lead fs-lg lh-sm">Мы уже понизили рейтинг приемного пункта, если вы отправите отзыв то его получат все руководители РесайклПро</p>{% endif %}
+            {% if tone == 'positive' %}<p class="lead fs-lg lh-sm">Мы уже повысили рейтинг приемного пункта, если вы отправите отзыв то его получат все руководители РесайклПро</p>{% endif %}
+            <p class="mb-6">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+
+            <!--/.row -->
+          </div>
+          <!--/column -->
+        </div>
+
+
+
+
+
+
+      </div>
+
+    </section>
+
+{% endblock %}

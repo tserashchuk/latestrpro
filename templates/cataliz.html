@@ -1,0 +1,227 @@
+{% extends 'base_for_product.html' %}
+{% load static thumbnail editorjs %}
+
+
+{% block page_title %}Сдать катализаторы в Минске{% endblock %}
+{% block meta_description %} {{ product.product_metadesc }}{% endblock %}
+
+
+<div itemscope itemtype="http://schema.org/Product">
+    <span itemprop="name">test_prod</span>
+</div>
+
+{% block opg %}
+    <meta property="og:title" content="{{ product.product_title }}" />
+    <meta property="og:description" content="{{ product.product_metadesc }}" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{{ product.product_image.url }}" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+{% endblock %}
+
+{% block header_class %}
+<header class="wrapper" style="background-color: #e9ffee;">
+{% endblock %}
+{% block content %}
+ <section class="wrapper bg-light">
+      <div class="container-card">
+        <div class="card image-wrapper bg-full bg-image mb-5" style="background-color: #e9ffee;">
+          <div class="card-body py-14 px-0">
+            <div class="container">
+              <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center text-center text-lg-start">
+                <div class="col-lg-6" data-cues="slideInDown" data-group="page-title" data-delay="900" data-disabled="true">
+
+                  <h1 class="display-2 mb-4 me-xl-5 me-xxl-0" data-cue="slideInDown" data-group="page-title" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 900ms; animation-direction: normal; animation-fill-mode: both;">Прием и переработка автомобильных <span class="text-green">катализаторов</span></h1>
+                  <p class="lead fs-23 lh-sm mb-7 pe-xxl-15" data-cue="slideInDown" data-group="page-title" data-delay="900" data-show="true" style="animation-name: slideInDown; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;">По предварительному звонку нашим специалистам</br></br><a href="#" class="btn btn-lg btn-primary rounded-pill me-2"data-bs-toggle="modal" data-bs-target="#modal-01">Заказать звонок</a></p>
+
+                </div>
+                <!--/column -->
+                <div class="col-lg-6">
+                  <img class="img-fluid mb-n18" src="{% static '/img/cataliz.png' %}" srcset="{% static '/img/cataliz.png' %}" data-cue="fadeIn" data-delay="300" alt="" data-show="true" style="animation-name: fadeIn; animation-duration: 700ms; animation-timing-function: ease; animation-delay: 300ms; animation-direction: normal; animation-fill-mode: both;">
+                </div>
+                <!--/column -->
+              </div>
+              <!-- /.row -->
+            </div>
+            <!-- /.container -->
+          </div>
+          <!--/.card-body -->
+        </div>
+        <!--/.card -->
+      </div>
+      <!-- /.container-card -->
+
+
+
+    </section>
+<div class="container">
+    <div class="row gx-lg-8 gx-xl-12 gy-6 my-10">
+          <div class="col-lg-4">
+            <div class="d-flex flex-row">
+              <div>
+                <div class="icon btn btn-circle disabled btn-soft-primary me-4"> <span class="number fs-18">1</span> </div>
+              </div>
+              <div>
+                <h4>Бесплатный анализ катализотора</h4>
+                <p class="mb-2">Проведем оценку на высокоточном оборудовании с гарантией соотвествия</p>
+              </div>
+            </div>
+          </div>
+          <!--/column -->
+          <div class="col-lg-4">
+            <div class="d-flex flex-row">
+              <div>
+                <div class="icon btn btn-circle disabled btn-soft-primary me-4"> <span class="number fs-18">2</span> </div>
+              </div>
+              <div>
+                <h4>Самостоятельно вырежем катализатор</h4>
+                <p class="mb-2">Проведем демонтаж и другие работы под ключ самостоятельно, бесплатно. При условии сдачи нам</p>
+              </div>
+            </div>
+          </div>
+          <!--/column -->
+          <div class="col-lg-4">
+            <div class="d-flex flex-row">
+              <div>
+                <div class="icon btn btn-circle disabled btn-soft-primary me-4"> <span class="number fs-18">3</span> </div>
+              </div>
+              <div>
+                <h4>Широкая география работы</h4>
+                <p class="mb-2">Орагнизуем выездные закупки по вашей заявке (рассчитывается от объема материала)</p>
+              </div>
+            </div>
+          </div>
+          <!--/column -->
+        </div>
+</div>
+
+
+    <section class="wrapper bg-light">
+            <div class="container pb-10">
+                <div class="card bg-soft-primary rounded-4">
+                    <div class="card-body p-md-10 p-xl-11">
+                        <div class="row gx-lg-8 gx-xl-12 gy-10">
+                            <div class="col-lg-6">
+                             <h2 class="display-4 mb-4">Часто задаваемые вопросы</h2>
+                                <p class="lead fs-lg mb-0">Если вы не нашли ответа на свой вопрос позвоните нам или закажите <a href="#" data-bs-toggle="modal" data-bs-target="#modal-01">обратный звонок</a></p>
+							</div>
+                            <!--/column -->
+                            <div class="col-lg-6">
+                                <div class="accordion accordion-wrapper" id="accordionExample">
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingOne">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">На какую сумму я могу рассчитывать?
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>Цена катализатора рассчитывается от содержания ценных металлов в нем. Цены разнятся в среднем от 20 до 2500 рублей за одну штуку. Что бы сказать точно нужно провести диагностику - мы сделаем ее для вас бесплатно
+</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingTwo">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwo" aria-expanded="false"
+                                                    aria-controls="collapseTwo">Принимаются все катализаторы? В моей машине есть катализатор?
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>Да - мы принимаем все катализаторы. Сейчас все автомобили обязательно оснащаются катализатором.
+</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingThree">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThree" aria-expanded="false"
+                                                    aria-controls="collapseThree">В каком состоянии катализатор подходит для сдачи?
+
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>Можно сказать что в любом состоянии - это может немного повлиять на цену
+</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+
+                                </div>
+                                <!--/.accordion -->
+                            </div>
+                            <!--/column -->
+                        </div>
+                        <!--/.row -->
+                    </div>
+                    <!--/.card-body -->
+                </div>
+                <!--/.card -->
+            </div>
+            <!-- /.container -->
+        </section>
+
+<section class="wrapper bg-light">
+            <div class="container pb-16">
+                <h2 class="display-4 mb-3">Как сдать катализатор?</h2>
+                                <p class="lead fs-lg mb-8">Если вам нужна консультация вы можете позвнить нам или <a href="#" data-bs-toggle="modal" data-bs-target="#modal-01">заказать обратный звонок</a></p>
+</p>
+                <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper line">
+                    <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-soft-primary disabled mb-4"><span
+                            class="number">01</span></span>
+                        <div class="mb-1 h4like">Связаться с нами</div>
+                        <p>
+                            Вы можете посетить наш приемный пукнт или заказать вывоз - наши менеджеры приедут в назначенное вами место со всем необходимым оборудованием.
+                        </p>
+                    </div>
+                    <!--/column -->
+                    <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-soft-primary disabled mb-4"><span class="number">02</span></span>
+                         <div class="mb-1 h4like">Оценка катализатора</div>
+                        <p>Мы предоставим точную оценку по содержанию драгоценных металлов и сумме закупки</p>
+                    </div>
+                    <!--/column -->
+                     <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-primary disabled mb-4"><span class="number">03</span></span>
+                         <div class="mb-1 h4like">Выплата денежных средств</div>
+                        <p>Предоставление всех необходимых документов, выплата наличными сразу на месте.</p>
+                    </div>
+                    <!--/column -->
+
+                </div>
+                <!--/.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script type="text/javascript" src={% static "/js/jquery.zoom.min.js" %}></script>
+<script>
+$(document).ready(function(){
+  $('.jquery-zoom').zoom();
+});
+</script>
+{% endblock %}

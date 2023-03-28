@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block page_title %}Поиск радиодеталей, электронных устройств и техники | «РесайклПро»{% endblock %}
+{% block meta_description %} Поиск радиодеталей, электронных устройств и техники ✅ Поиск по названию продукта и артикулу на сайте компании «РесайклПро»   {% endblock %}
+
+
+{% block opg %}
+    <meta property="og:title"
+          content="Поиск радиодеталей"/>
+    <meta property="og:description"
+          content="Поиск радиодеталей"/>
+    <meta property="og:url" content="{{ request.build_absolute_uri }}"/>
+    <meta property="og:image" content="{% static '/img/logo.png' %}"/>
+{% endblock %}
+
+
+
+
+{% block content %}
+    <meta name="robots" content="noindex, follow" />
+    <script>
+        const getSearch = async (searchquery) => {
+            let response = await fetch(`/search`, {
+                method: 'POST',
+                headers: {
+                    "X-CSRFToken": csrftoken
+                },
+                body: JSON.stringify({searchquery: searchquery})
+            })
+            let data = await response.json()
+            return data
+        }
+
+        const bclick = async () => {
+            let wr = document.getElementById('wr')
+            let searchfield = document.getElementById('searchfield')
+            wr.innerHTML = '<img src="https://icons8.com/preloaders/preloaders/1477/Plant.gif"/>'
+            let a = await getSearch(searchfield.value)
+            
+            wr.innerHTML = ''
+            for (const [key, value] of Object.entries(a[1])) {
+                wr.innerHTML += `<tr><td>${value[3]}</td> <td>${value[0]}</td><td>${value[1]} BYN за ${value[2]}</td></tr>`
+                if (key == 10) {
+                    break
+                }
+            }
+            for (const [key, value] of Object.entries(a[0])) {
+                wr.innerHTML += `<tr><td>${value[3]}</td> <td>${value[0]}</td><td>${value[1]} BYN за ${value[2]}</td></tr>`
+                if (key == 10) {
+                    break
+                }
+            }
+
+        }
+    document.addEventListener('keydown', (event) => {
+     if (event.keyCode == 13) { bclick() }}, false);
+    </script>
+
+    <div class="content-wrapper">
+        <section class="wrapper bg-light">
+            <div class="container pb-10 pt-10">
+                <div class="grid grid-view projects-masonry">
+
+                   <div class="input-group mb-3 shadow">
+                        <input type="text" id='searchfield' class="form-control"
+                               placeholder="Введите название продукта или артикул"
+                               aria-label="Введите название продукта или артикул" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-primary" onclick="bclick()" type="button" id="button-addon2">
+                            Найти
+                        </button>
+                    </div>
+
+
+                    <table class="tableart table mt-5">
+                        <thead>
+                        <tr>
+                            <th scope="col">Артикул</th>
+                            <th scope="col">Название</th>
+                            <th scope="col">Цена</th>
+                        </tr>
+                        </thead>
+                        <tbody id="wr" class="box">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

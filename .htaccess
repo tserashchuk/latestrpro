@@ -1,0 +1,7 @@
+#RewriteEngine ON
+
+#RewriteRule ^(.*)katalog/164/174/ https://rpro.by/category/mikroshema [R=301,L]
+
+#RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]

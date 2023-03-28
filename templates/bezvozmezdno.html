@@ -1,0 +1,367 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block page_title %}Безвозмездная сдача техники на переработку — «РесайклПро» {% endblock %}
+    {% block meta_description %} Безвозмездная сдача техники по всей Беларуси ✔ 100% легально ✔ Вывезем технику и утилизируем ✔ Вам не надо платить! ✔ Звоните: ☎ +375 (29) 392 44 92 {% endblock %}
+
+    {% block opg %}
+    <meta property="og:title" content="Безвозмездная сдача" />
+    <meta property="og:description" content="Бесплатная переаботка техники. Проведем оценку технического состояния. Вывезем технику и утилизируем. Без возврата средств за драгметаллы. Специальные условия для бюджетных организаций" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static '1.jpg' %}"/>
+    {% endblock %}
+    {% block scripts %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Условия для сдачи техники на безвозмездной основе",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>Организации имеют право сдавать технику на безвозмездной основе, если не ведется учет драгметаллов по заявленной технике. (Основание - постановление Совета Министров РБ №388 от 30 июня 2020г.).</p>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "Какую технику можно сдавать на безвозмездной основе",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>Список техники, которую можно сдавать на безвозмездной основе описан в постановлении Совета Министров РБ №388 от 30 июня 2020г. - группа №7.</p>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "На какой момент будет списана техника",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "p>На момент отгрузки техники и получения акта приема-передачи, техника будет считаться списанной.</p>"
+        }
+      }]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+          {
+              "@type": "ImageObject",
+              "@id": "{% static '1.jpg' %}",
+              "url": "{% static '1.jpg' %}",
+              "contentUrl": "{% static '1.jpg' %}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/avatars/4471.jpg' %}",
+              "url": "{% static '/img/avatars/4471.jpg' %}",
+              "contentUrl": "{% static '/img/avatars/4471.jpg' %}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/avatars/4444.jpg'%}",
+              "url": "{% static '/img/avatars/4444.jpg'%}",
+              "contentUrl": "{% static '/img/avatars/4444.jpg'%}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/avatars/4457.jpg'%}",
+              "url": "{% static '/img/avatars/4457.jpg'%}",
+              "contentUrl": "{% static '/img/avatars/4457.jpg'%}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/avatars/4448.jpg'%}",
+              "url": "{% static '/img/avatars/4448.jpg'%}",
+              "contentUrl": "{% static '/img/avatars/4448.jpg'%}"
+          }]
+    }
+    </script>
+    {% endblock %}
+
+
+{% block content %}
+    <div class="content-wrapper">
+        <section class="wrapper bg-light">
+            <div class="container pt-3">
+                <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb" id="breadcrumblist" itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="/">Главная</a>
+                            <meta itemprop="position" content="1" />
+                            <meta itemprop="name" content="Главная"/>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a class="inactiveLink" itemprop="item" href="{% url 'bezvozm' %}">Безвозмездная сдача техники</a>
+                            <meta itemprop="position" content="2" />
+                            <meta itemprop="name" content="Безвозмездная сдача техники"/>
+                        </li>
+                      </ol>
+                </nav>
+            </div>
+        </section>
+        <section class="wrapper bg-light">
+            <div class="container pt-11 pt-md-11">
+                <div class="row gx-lg-0 gx-xl-8 gy-10 gy-md-13 gy-lg-0 mb-7 mb-md-10 mb-lg-16 align-items-center">
+                    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-1 position-relative order-lg-2"
+                         data-cue="zoomIn">
+                        <div class="shape bg-dot primary rellax w-17 h-19" data-rellax-speed="1"
+                             style="top: -1.7rem; left: -1.5rem;"></div>
+                        <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
+                             style="bottom: -1.8rem; right: -0.8rem; width: 85%; height: 90%;"></div>
+                        <figure class="rounded"><img src="{% static '1.jpg' %}" alt="Безвозмездная сдача"/></figure>
+                    </div>
+                    <!--/column -->
+                    <div class="col-lg-5 mt-lg-n10 text-center text-lg-start" data-group="page-title">
+                        <h1 class="display-1 mb-5">Безвозмездная сдача</h1>
+                        <p class="lead fs-25 lh-sm mb-7 px-md-10 px-lg-0">Бесплатная переработка техники</p>
+                        <ul>
+                            <li>Проведем оценку технического состояния</li>
+                            <li>Утилизируем технику</li>
+                            <li>Без возврата средств за драгметаллы</li>
+                            <li>Специальные условия для бюджетных организаций</li>
+                        </ul>
+                        <div class="d-flex justify-content-center justify-content-lg-start"
+                             data-group="page-title-buttons">
+                          	<span><a href="#" class="btn btn-lg btn-primary rounded-pill me-2"data-bs-toggle="modal" data-bs-target="#modal-01">Задать вопрос</a></span>
+                        </div>
+                    </div>
+                    <!--/column -->
+                </div>
+            </div>
+        </section>
+        <section class="wrapper bg-light">
+            <div class="container pb-16">
+                <h2 class="display-4 mb-3">Как происходит безвозмездная сдача?</h2>
+                                <p class="lead fs-lg mb-8">Если вам нужна консультация вы можете позвнить нам или <a href="#" data-bs-toggle="modal" data-bs-target="#modal-01">заказать обратный звонок</a></p>
+</p>
+                <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper line">
+                    <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-soft-primary disabled mb-4"><span
+                            class="number">01</span></span>
+                        <div class="mb-1 h4like">Заполните документы</div>
+                        <p>Необходимо оформить пакет документов, для сдачи техники (заявка-опись,
+                            доверенность, удостоверение и ТТН) - <a href="{% static 'materials/Utilizacia.rar' %}">скачать</a></p>
+                    </div>
+                    <!--/column -->
+                    <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-primary disabled mb-4"><span class="number">02</span></span>
+                         <div class="mb-1 h4like">Отгрузка, акт</div>
+                        <p>Отгрузить технику, получить акт приема-передачи оборудования</p>
+                    </div>
+                    <!--/column -->
+
+                </div>
+                <!--/.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+   <section class="wrapper bg-light">
+      <div class="container pb-10">
+        <div class="row gx-md-8 gx-xl-12 gy-10 align-items-center">
+             <div class="col-lg-6">
+            <h2 class="display-4 mb-5">Наши преимущества</h2>
+            <p>Мы в постоянном совершенствовании процесса работы и основной ориентир этого процесса - потребность клиена в комфортном получении качественной услуги и в гарантии надежности сотрудничества.</p>
+            <p class="mb-6">Такая работа позволяет нам предоставлять хорошие условия не только в момент разовой сделки, но и улучшать совместную работу в долгосрочных договоренностях с клиентом</p>
+          </div>
+          <div class="col-lg-6 order-lg-2 pb-10">
+            <div class="card shadow-lg me-lg-6">
+              <div class="card-body p-6">
+                <div class="d-flex flex-row">
+                  <div>
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary disabled me-4"><span class="number">01</span></span>
+                  </div>
+                  <div>
+                    <div class="mb-1 h4like">Быстрые сроки</div>
+                    <p class="mb-0">Проведение всех работ до 7 месяцев</p>
+                  </div>
+                </div>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.card -->
+            <div class="card shadow-lg ms-lg-13 mt-6">
+              <div class="card-body p-6">
+                <div class="d-flex flex-row">
+                  <div>
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary disabled me-4"><span class="number">02</span></span>
+                  </div>
+                  <div>
+                    <div class="mb-1 h4like">Низкая стоимость выполнения работ</div>
+                    <p class="mb-0">Готовы подтвердить при первичной оценке</p>
+                  </div>
+                </div>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.card -->
+            <div class="card shadow-lg mx-lg-6 mt-6">
+              <div class="card-body p-6">
+                <div class="d-flex flex-row">
+                  <div>
+                    <span class="icon btn btn-circle btn-lg btn-soft-primary disabled me-4"><span class="number">03</span></span>
+                  </div>
+                  <div>
+                    <div class="mb-1 h4like">Работаем по всей Беларуси</div>
+                    <p class="mb-0">Услуга по списанию техники оказывается без регионального ограничения</p>
+                  </div>
+                </div>
+              </div>
+              <!--/.card-body -->
+            </div>
+            <!--/.card -->
+          </div>
+          <!--/column -->
+
+          <!--/column -->
+        </div>
+        <!--/.row -->
+
+      </div>
+      <!-- /.container -->
+    </section>
+
+
+        <section class="wrapper bg-light">
+			<div class="container ">
+				<div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+					<div class="col-lg-4">
+						<h2 class="fs-15 text-uppercase text-line text-primary text-center mb-3">Консультация</h2>
+						<h2 class="display-5 mb-5">Хотите получить консультацию?</h2>
+						<p>Вы можете получить ответы на все вопросы от наших специалистов.</p>
+						<a href="#" class="btn btn-primary rounded-pill mt-3" data-bs-toggle="modal" data-bs-target="#modal-01">Заказать звонок</a>
+					</div>
+					<!--/column -->
+					<div class="col-lg-8">
+						<div class="carousel owl-carousel text-center" data-margin="30" data-dots="true" data-autoplay="false" data-autoplay-timeout="5000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
+							<div class="item">
+								<img class="rounded-circle w-20 mx-auto mb-4" src={% static '/img/avatars/4471.jpg' %} alt="Безвозмездная сдача 1" />
+								<div class="mb-1 h4like">Оксана</div>
+								<div class="meta mb-2">Руководитель отдела юридических лиц</div>
+								<p class="mb-2">Внутренний номер: 401</p>
+
+								<!-- /.social -->
+							</div>
+							<!-- /.item -->
+							<div class="item">
+								<img class="rounded-circle w-20 mx-auto mb-4" src={% static '/img/avatars/4444.jpg'%}  alt="Безвозмездная сдача 2" />
+								<div class="mb-1 h4like">Наталья</div>
+								<div class="meta mb-2">Менеджер по работе с клиентами</div>
+								<p class="mb-2">Внутренний номер: 403</p>
+
+								<!-- /.social -->
+							</div>
+							<!-- /.item -->
+							<div class="item">
+								<img class="rounded-circle w-20 mx-auto mb-4" src={% static '/img/avatars/4457.jpg'%}  alt="Безвозмездная сдача 3" />
+								<div class="mb-1 h4like">Ирина</div>
+								<div class="meta mb-2">Менеджер по работе с клиентами</div>
+								<p class="mb-2">Внутренний номер: 402</p>
+
+								<!-- /.social -->
+							</div>
+							<!-- /.item -->
+							<div class="item">
+								<img class="rounded-circle w-20 mx-auto mb-4" src={% static '/img/avatars/4448.jpg'%}  alt="Безвозмездная сдача 4" />
+								<div class="mb-1 h4like">Юлия</div>
+								<div class="meta mb-2">Менеджер по работе с клиентами</div>
+								<p class="mb-2">Внутренний номер: 404</p>
+								<!-- /.social -->
+							</div>
+							<!-- /.item -->
+
+						</div>
+						<!-- /.owl-carousel -->
+					</div>
+					<!--/column -->
+				</div>
+				<!--/.row -->
+			</div>
+			<!-- /.container -->
+		</section>
+
+
+        <section class="wrapper bg-light wrapper-border">
+            <div class="container py-14 py-md-16">
+                <div class="card bg-soft-primary rounded-4">
+                    <div class="card-body p-md-10 p-xl-11">
+                        <div class="row gx-lg-8 gx-xl-12 gy-10">
+                            <div class="col-lg-6">
+                             <h2 class="display-4 mb-4">Часто задаваемые вопросы</h2>
+                                <p class="lead fs-lg mb-0">Если вы не нашли ответа на свой вопрос позвоните нам или закажите <a href="#" data-bs-toggle="modal" data-bs-target="#modal-01">обратный звонок</a></p>
+							</div>
+                            <!--/column -->
+                            <div class="col-lg-6">
+                                <div class="accordion accordion-wrapper" id="accordionExample">
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingOne">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">Условия для сдачи техники на безвозмездной основе
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>Организации имеют право сдавать технику на безвозмездной основе, если не ведется учет драгметаллов по заявленной технике. (Основание - Постановление Совета Министров РБ №388 от 30 июня 2020г.).
+</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingTwo">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwo" aria-expanded="false"
+                                                    aria-controls="collapseTwo">Какую технику можно сдавать на безвозмездной основе
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>Список техники, которую можно сдавать на безвозмездной основе описан в постановлении Совета Министров РБ №388 от 30 июня 2020г. - группа №7.
+</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingThree">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThree" aria-expanded="false"
+                                                    aria-controls="collapseThree">На какой момент будет списана техника
+
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                             aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>После отгрузки техники, акт приема-передачи, полученный от переработчика, является основанием для списания оборудования в учете поставщика.
+</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+
+                                </div>
+                                <!--/.accordion -->
+                            </div>
+                            <!--/column -->
+                        </div>
+                        <!--/.row -->
+                    </div>
+                    <!--/.card-body -->
+                </div>
+                <!--/.card -->
+            </div>
+            <!-- /.container -->
+        </section>
+
+    </div>
+    <!-- /.content-wrapper -->
+
+{% endblock %}

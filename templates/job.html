@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load editorjs %}
+
+
+{% block page_title %}Вакансии{% endblock %}
+{% block meta_description %}Вакансии{% endblock %}
+
+
+{% block opg %}
+    <meta property="og:title" content="Вакансии" />
+    <meta property="og:description" content="Вакансии" />
+  
+{% endblock %}
+
+{% block header_class %}
+<header class="wrapper" style="background-color: #e9ffee;">
+{% endblock %}
+
+{% block content %}
+        <section class="wrapper" style="background-color: #e9ffee;">
+      <div class="container pt-10 pb-2">
+        <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-13">
+          <div class="col-lg-6">
+            <h1 class="display-1 fs-66 lh-xxs mb-0">Станьте частью нашей команды</h1>
+          </div>
+          <!-- /column -->
+          <div class="col-lg-6">
+            <p class="text-center lead fs-25 my-3">Вы стремитесь к карьерному и личному развитию, верите, что можете изменить мир, а Ваша миссия - заботиться о клиенте.</p> <p class="text-center lead fs-25 my-3"> Вы разделяете наши ценности - достояние, амбициозное лидерство, extreme ownership (острое чувство владения), ответственность и хотите внедрить их в жизнь, тогда добро пожаловать к нам в команду!</p>
+            <a href="#" class="text-center more hover" data-bs-toggle="modal" data-bs-target="#modal-v">Отправить запрос</a>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+              </div>
+      <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-light">
+      <div class="container pt-15">
+        <div class="row mb-8 text-center">
+          <div class="col-lg-8 col-xl-7 mx-auto">
+            <h2 class="fs-16 text-uppercase text-primary mb-3">СПИСОК ВАКАНСИЙ</h2>
+            <h3 class="display-4">Актуальные вакансии</h3>
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
+          <div class="col-lg-6 position-relative">
+            <div class="shape bg-dot primary rellax w-17 h-18" data-rellax-speed="1" style="bottom: -2rem; left: -0.7rem;"></div>
+            <figure class="rounded mb-0"><img src="{% static '/img/car.png' %}" srcset="{% static '/img/car.png' %}" alt=""></figure>
+          </div>
+          <!--/column -->
+          <div class="col-lg-6">
+            <h3 class="display-6 mb-4">Агент по закупкам Могилев</h3>
+            <p class="mb-5">Мы ищем сотрудников во всех регионах Республики Беларусь для работы с физическими лицами основные обязанности которых - скупка электронного оборудования по клиентcкой базе компании и привлечение новых клиентов.
+</br></br><strong> Среди обязанностей также:</strong></br></br>
+
+- Консультация клиентов по условиям приемки и закупаемому материалу, видам и стоимости услуг; </br>
+
+- Поддержание активной клиентской базы;</br>
+
+- Оформление документов при приеме сырья;</br>
+
+- Сортировка принятого сырья, упаковка материала к отгрузке;</br>
+
+- Подготовка отгрузочных документов.</p>
+            <div class="row gy-3">
+              <div class="col-xl-6">
+                <ul class="icon-list bullet-bg bullet-soft-leaf mb-0">
+                  <li><span><i class="uil uil-check"></i></span><span>Оплата амортизации и топлива (разъездной характер работы)</span></li>
+                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Доход = оклад + мотивация от объема закупок сырья (нет верхней планки по зарплате!);</span></li>
+                </ul>
+              </div>
+              <!--/column -->
+              <div class="col-xl-6">
+                <ul class="icon-list bullet-bg bullet-soft-leaf mb-0">
+                  <li><span><i class="uil uil-check"></i></span><span>Обучение за счет компании, оплачиваемая стажировка;</span></li>
+                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>- Оформление в штат с первого рабочего дня, контрактная форма найма;</span></li>
+                </ul>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+            <a href="#" class="btn btn-soft-leaf rounded-pill mt-6 mb-0"  data-bs-toggle="modal" data-bs-target="#modal-v">Свяжитесь с нами</a>
+            <a class="btn btn-primary rounded-pill mt-6 mb-0" href="https://rabota.by/vacancy/75679351">Подробнее на rabota.by</a>
+          </div>
+          <!--/column -->
+        </div>
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
+          <div class="col-lg-6 order-lg-2 position-relative">
+            <div class="shape rounded-circle bg-soft-primary rellax w-18 h-18" data-rellax-speed="1" style="bottom: -2.5rem; right: -1.5rem;"></div>
+            <figure class="rounded mb-0"><img src="{% static '/img/phone.png' %}" srcset="{% static '/img/phone.png' %}" alt=""></figure>
+          </div>
+          <!--/column -->
+          <div class="col-lg-6">
+            <h3 class="display-6 mb-4">Менеджер по продажам услуг</h3>
+            <p class="mb-5">Мы ищем сотрудника по продаже услуг по переработке оборудования, содержащего драгоценные металлы, с целью извлечения таких металлов в Госфонды. Работа только с юридическими лицами.
+           </br></br><strong> Среди обязанностей также:</strong></br></br>
+            - Прием и обработка входящих звонков;</br>
+- Поддержание активной клиентской базы;</br>
+- Работа с готовой клиентской базой;</br>
+- Проведение переговоров, ведение деловой переписки;</br>
+- Документооборот (счет-фактуры, ТТН, акты, договора и т.д.;</br>
+- Работа в CRM-системе Bitrix24, 1С
+            
+            
+            
+            </p>
+            <div class="row gy-3">
+              <div class="col-xl-6">
+                <ul class="icon-list bullet-bg bullet-soft-leaf mb-0">
+                  <li><span><i class="uil uil-check"></i></span><span>Доход: оклад + % от продаж;</span></li>
+                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>График работы: Пн-Чт 8.30-17.15, Пт 8.30-16.00</span></li>
+                </ul>
+              </div>
+              <!--/column -->
+              <div class="col-xl-6">
+                <ul class="icon-list bullet-bg bullet-soft-leaf mb-0">
+                  <li><span><i class="uil uil-check"></i></span><span>Обучение за счет компании, оплачиваемая стажировка</span></li>
+                  <li class="mt-3"><span><i class="uil uil-check"></i></span><span>Оформление в штат с первого рабочего дня, контрактная форма найма</span></li>
+                </ul>
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+            <a href="#" class="btn btn-soft-leaf rounded-pill mt-6 mb-0"  data-bs-toggle="modal" data-bs-target="#modal-v">Свяжитесь с нами</a>
+          </div>
+          <!--/column -->
+        </div>
+
+        <!--/.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    
+    <div class="modal fade" id="modal-v" tabindex="-1" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content text-center">
+            <div class="modal-body">
+                  <div class="h4like">Начните работать с нами!</div>
+                <script data-b24-form="inline/74/j0wpsc" data-skip-moving="true">
+(function(w,d,u){
+var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+})(window,document,'https://cdn-ru.bitrix24.by/b11356450/crm/form/loader_74.js');
+</script>
+            </div>
+            <!--/.modal-body -->
+        </div>
+        <!--/.modal-content -->
+    </div>
+    <!--/.modal-dialog -->
+</div>
+    
+    
+    
+{% endblock %}

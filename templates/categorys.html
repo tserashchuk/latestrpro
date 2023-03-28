@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block page_title %}Цены на радиодетали в Минске и Беларуси. Прайс-лист — {% endblock %}
+    {% block meta_description %}➤ Цены на радиодетали. ✅ Высокие цены. ✅ Более 10+ пунктов приема по Беларуси. ✅ Моментальная выплата. ✅ На 100% легально! ✅ Прайс-лист на сайте!{% endblock %}
+    
+    {% block opg %}
+    <meta property="og:title" content="Цены на радиодетали в Минске и Беларуси. Прайс-лист — ООО «РесайклПро»" />
+    <meta property="og:description" content="➤ Цены на радиодетали. ✅ Высокие цены. ✅ Более 10+ пунктов приема по Беларуси. ✅ Моментальная выплата. ✅ На 100% легально! ✅ Прайс-лист на сайте!"/>
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static '/img/logo.png' %}"/>
+    {% endblock %}
+    {% block scripts %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Какие детали вы принимаете?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>Мы принимаем все детали перечисленные на сайте и в <a href={% static 'materials/price.pdf' %}>прайс-листе</a></p>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "Как сдать Вам детали? Что для этого надо, куда ехать?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>При сдаче электронного лома необходимо предъявить паспорт. Посмотреть адреса и режим работы пунктов приема можно <a href={% url 'priem' %}>посмотреть на этой старнице</a></p>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "Как узнать сколько мне заплатят за определенные детали?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>Актуальные цены указаны в <a href={% static 'materials/price.pdf' %}>прайс-листе</a>, также вы можете возпользоваться калькулятором на главной странице или позвонить нам.</p>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "Радиодетали не перечисленные в прейскуранте, Вы не принимаете?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>Мы принимаем все детали перечисленные в прайс-листе.</p>"
+        }
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+          {
+              "@type": "ImageObject",
+              "@id": "{{ category.cat_image.url }}",
+              "url": "{{ category.cat_image.url }}",
+              "contentUrl": "{{ category.cat_image.url }}"
+          }]
+    }
+    </script>
+    {% endblock %}
+
+{% block content %}
+<div class="container-xxl py-5 bg-primary hero-header mb-5">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 pt-5">
+                        <div class="col-12 text-center text-lg-start">
+                            <h1 class="display-4 text-white animated slideInLeft">Контакты</h1>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center justify-content-lg-start animated slideInLeft">
+                                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                                    <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+        <!-- Pricing Start -->
+        <div class="container-xxl py-5">
+            <div class="container px-lg-5">
+                <div class="section-title position-relative text-center mx-auto mb-5 pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Our Hosting Plans</h1>
+                    <p class="mb-1">Vero justo sed sed vero clita amet. Et justo vero sea diam elitr amet ipsum eos ipsum clita duo sed. Sed vero sea diam erat vero elitr sit clita.</p>
+                </div>
+<div class="row gy-5 gx-4">
+                {% for category in categorys %}
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="position-relative shadow rounded border-top border-5 border-primary">
+                            <div class="d-flex align-items-center justify-content-center position-absolute top-0 start-50 translate-middle bg-primary rounded-circle" style="width: 45px; height: 45px; margin-top: -3px;">
+                                <i class="fa fa-share-alt text-white"></i>
+                            </div>
+                            <div class="text-center border-bottom p-4 pt-5">
+                                <h4 class="fw-bold">{{ category.cat_name }}</h4>
+                                <img src="{{ category.cat_image.url }}" class="w-100"/>
+                                <p class="mb-0">test</p>
+                            </div>
+                            <div class="text-center border-bottom p-4">
+                                <p class="text-primary mb-1">Latest Offer - <strong>Save 30%</strong></p>
+                                <h1 class="mb-3">
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>2.49<small
+                                        class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                </h1>
+                                <a class="btn btn-primary px-4 py-2" href="">Buy Now</a>
+                            </div>
+                            <div class="p-4">
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>100 GB Disk Space</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Unlimited Bandwith</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Upgrade to Positive SSL</p>
+                                <p class="border-bottom pb-3"><i class="fa fa-check text-primary me-3"></i>Automatic Malware Removal</p>
+                                <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>30 Days Money Back Guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+</div>
+            </div>
+        </div>
+        <!-- Pricing End -->
+
+{% endblock %}

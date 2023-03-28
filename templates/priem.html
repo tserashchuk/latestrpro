@@ -1,0 +1,360 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block page_title %}Утилизация бытовой техники в Минске за деньги | Сдать неработающую технику{% endblock %}
+    {% block meta_description %}✅ Прием старой бытовой техники за деньги ✅ Компания «РесайклПро» оказывает услуги приема и утилизации б/у техники ✅ Бесплатный вывоз ✅ 0,25 за каждый кг техники{% endblock %}
+
+    {% block opg %}
+    <meta property="og:title" content="Утилизация бытовой техники в Минске за деньги | Сдать неработающую технику" />
+    <meta property="og:description" content="✅ Прием старой бытовой техники за деньги ✅ Компания «РесайклПро» оказывает услуги приема и утилизации б/у техники ✅ Бесплатный вывоз ✅ 0,25 за каждый кг техники" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static '/img/logo.png' %}"/>
+    {% endblock %}
+    {% block scripts %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Для чего нужна утилизация",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>Специализированные компании разбирают технику на составляющие, часть из которых отправляется на переработку для повторного использования. Вредные компоненты обязательно проходят переработку. Утилизация — наш общий вклад в охрану окружающей среды.</p>"
+        }
+      }, {
+        "@type": "Question",
+        "name": "Вы можете сами забрать технику?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<p>Да - в Минске и Могилеве работает услуга бесплатного вывоза техники</p>"
+        }
+      }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+          {
+              "@type": "ImageObject",
+              "@id": "{% static '1.jpg' %}",
+              "url": "{% static '1.jpg' %}",
+              "contentUrl": "{% static '1.jpg' %}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/photos/pd1.jpg' %}",
+              "url": "{% static '/img/photos/pd1.jpg' %}",
+              "contentUrl": "{% static '/img/photos/pd1.jpg' %}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/photos/pd2.png' %}",
+              "url": "{% static '/img/photos/pd2.png' %}",
+              "contentUrl": "{% static '/img/photos/pd2.png' %}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/photos/pd3.png' %}",
+              "url": "{% static '/img/photos/pd3.png' %}",
+              "contentUrl": "{% static '/img/photos/pd3.png' %}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/photos/pd4.png' %}",
+              "url": "{% static '/img/photos/pd4.png' %}",
+              "contentUrl": "{% static '/img/photos/pd4.png' %}"
+          }, {
+              "@type": "ImageObject",
+              "@id": "{% static '/img/photos/tm1.jpg' %}",
+              "url": "{% static '/img/photos/tm1.jpg' %}",
+              "contentUrl": "{% static '/img/photos/tm1.jpg' %}"
+          }]
+    }
+    </script>
+    {% endblock %}
+
+
+{% block content %}
+    <div class="content-wrapper">
+        <section class="wrapper bg-light">
+            <div class="container pt-3">
+                <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb" id="breadcrumblist" itemscope itemtype="http://schema.org/BreadcrumbList">
+                        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="/">Главная</a>
+                            <meta itemprop="position" content="1" />
+                            <meta itemprop="name" content="Главная"/>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a class="inactiveLink" itemprop="item" href="{% url 'priem' %}">Сдать старую технику за деньги</a>
+                            <meta itemprop="position" content="2" />
+                            <meta itemprop="name" content="Сдать старую технику за деньги"/>
+                        </li>
+                      </ol>
+                </nav>
+            </div>
+        </section>
+        <section class="wrapper bg-light">
+            <div class="container pt-12 pt-md-12">
+                <div class="row gx-lg-0 gx-xl-8 gy-10 gy-md-13 gy-lg-0 mb-7 mb-md-10 mb-lg-16 align-items-center">
+                    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-1 position-relative order-lg-2"
+                         >
+                        <div class="shape bg-dot primary rellax w-17 h-19" data-rellax-speed="1"
+                             style="top: -1.7rem; left: -1.5rem;"></div>
+                        <div class="shape rounded bg-soft-primary rellax d-md-block" data-rellax-speed="0"
+                             style="bottom: -1.8rem; right: -0.8rem; width: 85%; height: 90%;"></div>
+                        <figure class="rounded"><img src="{% static '1.jpg' %}" alt="Сдать старую технику за деньги"/></figure>
+                    </div>
+                    <!--/column -->
+                    <div class="col-lg-5 mt-lg-n10 text-center text-lg-start" data-group="page-title">
+                        <h1 class="display-1 mb-5">Сдать старую технику за деньги</h1>
+                        <p class="lead fs-25 lh-sm mb-7 px-md-10 px-lg-0">Сдавая электронные отходы в нашу компанию, Вы
+                            бережете природу</p>
+                        <ul>
+                            <li>Выплачиваем - 0,25 BYN за килограмм техники</li>
+                            <li>Принимаем технику в любом состоянии и количестве</li>
+                            <li>Утилизируя технику вы бережете экологию</li>
+                            <li>Не хотите заниматься доставкой техники? Воспользуйтесь <a href={% url 'vyvoz' %}>услугой бесплатного вывоза</a></li>
+                        </ul>
+                        <div class="d-flex justify-content-center justify-content-lg-start" data-group="page-title-buttons">
+                            <div class="d-grid gap-2 d-md-block">
+                              <button type="button" class="btn btn-lg btn-primary rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#modal-01">Заказать звонок</button>
+                              <button class="btn btn-lg btn-outline-primary rounded-pill" type="button"> 
+                                <a href="{% url 'punkty' %}">Пункты приема</a>
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/column -->
+                </div>
+            </div>
+        </section>
+        <section class="wrapper bg-light">
+            <div class="container pb-12">
+                <div class="row align-items-center mb-7">
+                    <div class="col-md-8 col-lg-8 col-xl-7 col-xxl-6 pe-lg-17">
+                        <h2 class="display-4 mb-3">Какую технику мы принимаем?</h2>
+                        <p class="lead fs-lg">Мы принимаем на переработку электрооборудование в полной комплектации: холодильники, стиральные машины, газовые и электроплиты и другое бытовое оборудование</p>
+                    </div>
+                    <!--/column -->
+                </div>
+                <!--/.row -->
+                <div class="carousel owl-carousel grid-view owl-loaded owl-drag" data-margin="30" data-dots="true"
+                     data-autoplay="false" data-autoplay-timeout="5000"
+                             data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1200":{"items": "3"}}'>
+
+
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage"
+                             style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2640px;">
+                            <div class="owl-item active" style="width: 410px; margin-right: 30px;">
+                                <div class="item">
+                                    <figure class="rounded mb-6"><img
+                                            src={% static "/img/photos/pd1.jpg" %} alt="Сдать старую технику за деньги 1"></figure>
+                                    <div class="project-details d-flex justify-content-center flex-column">
+                                        <div class="post-header">
+                                            <div class="post-category text-line mb-3 text-green">(0,25р за кг) в
+                                                среднем ≈ 3,75 BYN
+                                            </div>
+                                            <div class="h4like" class="post-title h3 ">Телевизор</div>
+                                        </div>
+                                        <!-- /.post-header -->
+                                    </div>
+                                    <!-- /.project-details -->
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 410px; margin-right: 30px;">
+                                <div class="item">
+                                    <figure class="rounded mb-6"><img
+                                            src={% static "/img/photos/pd2.png"%} alt="Сдать старую технику за деньги 2"></figure>
+                                    <div class="project-details d-flex justify-content-center flex-column">
+                                        <div class="post-header">
+                                            <div class="post-category text-line mb-3 text-green">(0,25р за кг) в среднем ≈ 10 BYN
+                                            </div>
+                                            <div class="h4like" class="post-title h3">Холодильник</div>
+                                        </div>
+                                        <!-- /.post-header -->
+                                    </div>
+                                    <!-- /.project-details -->
+                                </div>
+                            </div>
+                            <div class="owl-item active" style="width: 410px; margin-right: 30px;">
+                                <div class="item">
+                                    <figure class="rounded mb-6"><img
+                                            src={% static "/img/photos/pd3.png" %} alt="Сдать старую технику за деньги 3"></figure>
+                                    <div class="project-details d-flex justify-content-center flex-column">
+                                        <div class="post-header">
+                                            <div class="post-category text-line mb-3 text-green">(0,25р за кг) в
+                                                среднем ≈ 12,5 BYN
+                                            </div>
+                                            <div class="h4like" class="post-title h3">Стиральную машину</div>
+                                        </div>
+                                        <!-- /.post-header -->
+                                    </div>
+                                    <!-- /.project-details -->
+                                </div>
+                            </div>
+                            <div class="owl-item" style="width: 410px; margin-right: 30px;">
+                                <div class="item">
+                                    <figure class="rounded mb-6"><img
+                                            src={% static "/img/photos/pd4.png"%} alt="Сдать старую технику за деньги 4"></figure>
+                                    <div class="project-details d-flex justify-content-center flex-column">
+                                        <div class="post-header">
+                                            <div class="post-category text-line mb-3 text-green">(0,25р за кг) в
+                                                среднем ≈ 6,25 BYN
+                                            </div>
+                                            <div class="h4like" class="post-title h3">Плиту</div>
+                                        </div>
+                                        <!-- /.post-header -->
+                                    </div>
+                                    <!-- /.project-details -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="owl-nav disabled">
+                        <button type="button" role="presentation" class="owl-prev"><i class="uil-arrow-left"></i>
+                        </button>
+                        <button type="button" role="presentation" class="owl-next"><i class="uil-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="owl-dots">
+                        <button role="button" class="owl-dot active"><span></span></button>
+                        <button role="button" class="owl-dot"><span></span></button>
+
+                    </div>
+                </div>
+                <!-- /.owl-carousel -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <section class="wrapper bg-light">
+            <div class="container pb-10">
+                <h2 class="display-4 mb-3">Как сдать технику?</h2>
+                <p class="lead fs-lg mb-8">Мы принимаем технику на приемных пунктах, а также оказываем <a href={% url 'vyvoz' %}>услугу бесплатного вывоза</a></p>
+                <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper line">
+                    <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-primary disabled mb-4"><span
+                            class="number">01</span></span>
+                        <div class="mb-1 h4like">Выберите удобный для вас пункт приема</div>
+                        <p>Вы можете посмотреть все <a href="{% url 'punkty' %}">пункты према</a> или связаться с нами любым удобным способом - например <a href="#" data-bs-toggle="modal" data-bs-target="#modal-01">заказать звонок</a></p>
+                    </div>
+                    <!--/column -->
+                    <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-soft-primary  disabled mb-4"><span class="number">02</span></span>
+                        <div class="mb-1 h4like">Привезти материал на пункт приема</div>
+                        <p>Вашу технику взвесят и проведут ее оценку</p>
+                    </div>
+                    <!--/column -->
+                    <div class="col-md-6 col-lg-3"><span
+                            class="icon btn btn-circle btn-lg btn-soft-primary disabled mb-4"><span
+                            class="number">03</span></span>
+                        <div class="mb-1 h4like">Выплата вознаграждения наличными на руки</div>
+                        <p>После оценки техники на приемном пункте вам выплатят 0,25 BYN за каждый килограмм</p>
+                    </div>
+                    <!--/column -->
+                </div>
+                <!--/.row -->
+            </div>
+            <!-- /.container -->
+        </section>
+
+
+
+
+        <section class="wrapper bg-light">
+            <div class="container pb-10">
+                <div class="card shadow-lg">
+                    <div class="row gx-0">
+                        <div class="col-lg-6 image-wrapper bg-image bg-cover rounded-top rounded-lg-start d-none d-md-block"
+                             data-image-src="{% static '/img/photos/tm1.jpg' %}" alt="Сдать старую технику за деньги 5"
+                             style="background-image: url({% static '/img/photos/tm1.jpg' %});">
+                        </div>
+                        <!--/column -->
+                        <div class="col-lg-6">
+                            <div class="p-10 p-md-11 p-lg-13">
+                                <h2 class="display-4 mb-3">Оформить заявку на вывоз техники</h2>
+                                <p class="mb-0">Мы вывезем технику бесплатно - без выплаты за вес. </p>
+                                <script data-b24-form="inline/8/vu94qk" data-skip-moving="true">
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://cdn-ru.bitrix24.by/b11356450/crm/form/loader_8.js');
+</script>
+                            </div>
+                            <!--/div -->
+                        </div>
+                        <!--/column -->
+                    </div>
+                    <!--/.row -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.container -->
+        </section>
+
+        <section class="wrapper bg-light wrapper-border">
+            <div class="container pb-16">
+                <div class="card bg-soft-primary rounded-4">
+                    <div class="card-body p-md-10 p-xl-11">
+                        <div class="row gx-lg-8 gx-xl-12 gy-10">
+                            <div class="col-lg-6">
+                               <h2 class="display-4 mb-4">Часто задаваемые вопросы</h2>
+                                <p class="lead fs-lg mb-0">Если вы не нашли ответа на свой вопрос позвоните нам или закажите <a href="#" data-bs-toggle="modal" data-bs-target="#modal-01">обратный звонок</a></p>
+                            </div>
+                            <!--/column -->
+                            <div class="col-lg-6">
+                                <div class="accordion accordion-wrapper" id="accordionExample">
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingOne">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">Для чего нужна утилизация
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseOne" class="accordion-collapse collapse"
+                                             aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>Специализированные компании разбирают технику на составляющие, часть из которых отправляется на переработку для повторного использования. Вредные компоненты обязательно проходят переработку.
+Утилизация — наш общий вклад в охрану окружающей среды.</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+                                    <div class="card plain accordion-item">
+                                        <div class="card-header" id="headingTwo">
+                                            <button class="collapsed" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwo" aria-expanded="false"
+                                                    aria-controls="collapseTwo">Вы можете сами забрать технику?
+                                            </button>
+                                        </div>
+                                        <!--/.card-header -->
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                             aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>Да - в Минске и Могилеве работает услуга бесплатного вывоза техники</p>
+                                            </div>
+                                            <!--/.card-body -->
+                                        </div>
+                                        <!--/.accordion-collapse -->
+                                    </div>
+                                    <!--/.accordion-item -->
+
+                                </div>
+                                <!--/.accordion -->
+                            </div>
+                            <!--/column -->
+                        </div>
+                        <!--/.row -->
+                    </div>
+                    <!--/.card-body -->
+                </div>
+                <!--/.card -->
+            </div>
+            <!-- /.container -->
+        </section>
+
+    </div>
+{% endblock %}

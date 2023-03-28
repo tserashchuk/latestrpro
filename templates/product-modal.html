@@ -1,0 +1,21 @@
+{% load thumbnail %}
+
+<div class="modal-header">
+  <h5 class="modal-title" id="productModalLabel">{{ product.product_name | capfirst }}</h5>
+  <button type="button" class="close modalclose" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <figure class="rounded mb-6 jquery-zoom" style="cursor: crosshair">
+    <img src="{{ product.product_image.url }}" class="d-none" alt="{{ product.product_name }}"  />
+    <img src="{% thumbnail product.product_image 500x500 %}" alt="{{ product.product_name }}" />
+  </figure>
+  <div class="small-desc">
+    <div>
+      <strong>{{ product.product_price }} BYN за {{ product.color }}</strong>
+    </div>
+    {{ product.product_short_desc }}
+    </br></br><a href="{% url 'product' product.product_slug %}" class="btn btn-outline-primary rounded-pill">Подробнее</a>
+  </div>
+</div>

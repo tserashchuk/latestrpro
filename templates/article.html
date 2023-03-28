@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load editorjs %}
+
+{% block page_title %}{{ article.article_title }}{% endblock %}
+{% block meta_description %} {{ article.article_metadesc }}{% endblock %}
+
+
+{% block opg %}
+    <meta property="og:title" content="{{ article.article_title }}" />
+    <meta property="og:description" content="{{ article.article_metadesc }}" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{{ article.article_image.url }}" />
+{% endblock %}
+{% block scripts %}
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "{{ article.article_name }}",
+  "image" : "{{ article.article_image.url }}",
+  "articleBody" : "{{ article.article_short_desc }}",
+  "datePublished": "{{ article.pub_date }}",
+  "headline": "{{ article.article_name }}"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+      {
+          "@type": "ImageObject",
+          "@id": "{{ article.article_image.url }}",
+          "url": "{{ article.article_image.url }}",
+          "contentUrl": "{{ article.article_image.url }}"
+      }]
+}
+</script>
+{% endblock %}
+{% block content %}
+<div class="content-wrapper">
+    <section class="wrapper bg-light">
+        <div class="container pt-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb" id="breadcrumblist" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="/">Главная</a>
+                    <meta itemprop="position" content="1" />
+                    <meta itemprop="name" content="Главная"/>
+                </li>
+                <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a itemprop="item" href="{% url 'news' %}">Новости</a>
+                    <meta itemprop="position" content="2" />
+                    <meta itemprop="name" content="Новости"/>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                    <a class="inactiveLink" itemprop="item" href="{% url 'article' article.article_slug %}">{{ article.article_title }}</a>
+                    <meta itemprop="position" content="3" />
+                    <meta itemprop="name" content="{{ article.article_title }}"/>
+                </li>
+              </ol>
+            </nav>
+        </div>
+    </section>
+    <section class="wrapper bg-light">
+        <div class="container pt-3 text-center">
+            <div class="row">
+                <div class="col-md-7 col-lg-6 col-xl-8 mx-auto">
+                    <h1 class="display-1 mb-3">{{ article.article_name }}</h1>
+
+                </div>
+                <!-- /column -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+    <section class="wrapper bg-light">
+        <div class="container py-16 pb-md-16">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="blog single mt-n17 pt-5">
+                        <div class="card">
+                            <figure class="card-img-top"><img src="{{ article.article_image.url }}" alt="{{ article.article_name }}"></figure>
+                            <div class="card-body">
+                                <div class="classic-view">
+                                    <article class="post article_custom">
+                                        <div class="post-content mb-5">
+                                            {{ article.body_editorjs | editorjs }}
+                                        </div>
+                                        <!-- /.post-content -->
+
+                                    </article>
+                                    <!-- /.post -->
+                                </div>
+                                <!-- /.classic-view -->
+                                <hr>
+
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.blog -->
+                </div>
+                <!-- /column -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+    </div>
+{% endblock %}
